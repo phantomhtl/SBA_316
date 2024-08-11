@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if start date is later than end date
     if (startDate > endDate) {
       alert("Start date cannot be later than the end date.");
-  }
+    }
   });
 
   function addDestination(name, startDate, endDate) {
-
+    const li = document.createElement("li");
+    li.textContent = `${name} - Start: ${startDate} | End: ${endDate}`;
   }
 });
