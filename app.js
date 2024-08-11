@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if start date is later than end date
     if (startDate > endDate) {
       alert("Start date cannot be later than the end date.");
+    } else if (destinationName && destinationStart && destinationEnd) {
+      addDestination(destinationName, destinationStart, destinationEnd);
+      form.reset();
     }
   });
 
