@@ -67,10 +67,15 @@ h1 {
 #destination-list .complete-btn {
   background-color: #28b549;
   color: white;
- }
- #destination-list .delete-btn {
+}
+#destination-list .complete-btn:hover {
+  background-color: #1d8433;
+}
+
+#destination-list .delete-btn {
   background-color: red;
   color: white;
- }  
-
- 
+}
+#destination-list .delete-btn:hover {
+  background-color: #c21c2d;
+}
