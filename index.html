@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Plan Your Next Dream Getaway</title>
-</head>
-<body>
-  <div>
-    <h1>Plan Your Dream Destinations</h1>
-  </div>
-   <form id="destination-form">
-       <input type="text" id="destination-name" placeholder="Destination Name" minlength="2" required>
-       <input type="date" id="destination-start" required>
-       <input type="date" id="destination-end" required>
-       <button type="submit">Add Your Next Destination</button>
-   </form>
-   <ul id="destination-list"></ul>
-  <script src="app.js" async defer></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Plan Your Next Dream Getaway</title>
+  </head>
+  <body>
+    <div>
+      <h1>Plan Your Dream Destinations</h1>
+    </div>
+    <div>
+      <form id="destination-form">
+        <input
+          type="text"
+          id="destination-name"
+          placeholder="Destination Name"
+          minlength="2"
+          required
+        />
+        <input type="date" id="destination-start" required />
+        <input type="date" id="destination-end" required />
+        <button type="submit">Add Your Next Destination</button>
+      </form>
+    </div>
+    <div>
+      <ul id="destination-list"></ul>
+    </div>
+    <script src="app.js" async defer></script>
+  </body>
 </html>
