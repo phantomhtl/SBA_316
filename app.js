@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const destinationName = document.getElementById("destination-name").value;
     const destinationStart = document.getElementById("destination-start").value;
     const destinationEnd = document.getElementById("destination-end").value;
+    // Check to see if there is characters in the input
+    const pattern = /[a-zA-Z]/;
+    if (!pattern.test(destinationName)) {
+        alert("Destination name must include at least two characters.");
+        return;
+    }
+
     // Convert dates to Date objects for comparison
     const startDate = new Date(destinationStart);
     const endDate = new Date(destinationEnd);
