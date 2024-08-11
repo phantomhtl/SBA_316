@@ -31,5 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteBtn.addEventListener("click", () => {
       li.remove();
     });
+    li.appendChild(completeBtn);
+    li.appendChild(deleteBtn);
+    destinationList.appendChild(li);
   }
 });
