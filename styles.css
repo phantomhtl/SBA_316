@@ -79,3 +79,8 @@ h1 {
 #destination-list .delete-btn:hover {
   background-color: #c21c2d;
 }
+#destination-list li.completed {
+  text-decoration: line-through;
+  color: #686f75;
+ }
+ 
