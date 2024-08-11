@@ -63,3 +63,14 @@ h1 {
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+#destination-list .complete-btn {
+  background-color: #28b549;
+  color: white;
+ }
+ #destination-list .delete-btn {
+  background-color: red;
+  color: white;
+ }  
+
+ 
