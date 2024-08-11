@@ -44,3 +44,22 @@ h1 {
 #destination-form button:hover {
   background-color: #116ccd;
 }
+
+#destination-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#destination-list li {
+  background: white;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
