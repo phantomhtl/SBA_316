@@ -18,9 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function addDestination(name, startDate, endDate) {
     const li = document.createElement("li");
     li.textContent = `${name} - Start: ${startDate} | End: ${endDate}`;
+
     const completeBtn = document.createElement("button");
     completeBtn.textContent = "Complete";
     completeBtn.classList.add("complete-btn");
+    completeBtn.addEventListener("click", () => {
+      li.classList.toggle("completed");
+    });
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add("delete-btn");
