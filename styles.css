@@ -59,14 +59,25 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 4px;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#destination-list button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  position: absolute;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 #destination-list .complete-btn {
   background-color: #28b549;
   color: white;
+  right: 80px;
 }
 #destination-list .complete-btn:hover {
   background-color: #1d8433;
@@ -75,6 +86,7 @@ h1 {
 #destination-list .delete-btn {
   background-color: red;
   color: white;
+  right: 10px;
 }
 #destination-list .delete-btn:hover {
   background-color: #c21c2d;
@@ -82,5 +94,4 @@ h1 {
 #destination-list li.completed {
   text-decoration: line-through;
   color: #686f75;
- }
- 
+}
