@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Convert dates to Date objects for comparison
     const startDate = new Date(destinationStart);
     const endDate = new Date(destinationEnd);
-
+    // Check if start date is later than end date
+    if (startDate > endDate) {
+      alert("Start date cannot be later than the end date.");
+  }
   });
 
   function addDestination(name, startDate, endDate) {
