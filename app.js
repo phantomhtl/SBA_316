@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("destination-form");
-  const destinationList = document.getElementById("destination-list");
+  const destinationList = document.querySelector("#destination-list");
+
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const destinationName = document.getElementById("destination-name").value;
@@ -9,19 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check to see if there is characters in the input
     const pattern = /[a-zA-Z]/;
     if (!pattern.test(destinationName)) {
-        alert("Destination name must include at least two characters.");
-        return;
+      alert("Destination name must include at least two characters.");
+      return;
     }
 
     // Convert dates to Date objects for comparison
     const startDate = new Date(destinationStart);
     const endDate = new Date(destinationEnd);
-    // Check if start date is later than end date
     if (startDate > endDate) {
       alert("Start date cannot be later than the end date.");
     } else if (destinationName && destinationStart && destinationEnd) {
       addDestination(destinationName, destinationStart, destinationEnd);
       form.reset();
+      updateMessage();
     }
   });
 
@@ -34,15 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
     completeBtn.classList.add("complete-btn");
     completeBtn.addEventListener("click", () => {
       li.classList.toggle("completed");
+      li.style.border = "2px solid green";
     });
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add("delete-btn");
     deleteBtn.addEventListener("click", () => {
-      li.remove();
+      if (window.confirm("Are you sure you want to delete this destination?")) {
+        li.remove();
+        updateMessage();
+      }
     });
     li.appendChild(completeBtn);
     li.appendChild(deleteBtn);
     destinationList.appendChild(li);
+  }
+
+  function updateMessage() {
+    const message = document.getElementById("message");
+    const totalDestinations = destinationList.children.length;
+    if (totalDestinations == 1) {
+      message.textContent = `You have 1 destination planned.`;
+    } else {
+      message.textContent = `You have ${totalDestinations} destinations planned.`;
+    }
   }
 });
