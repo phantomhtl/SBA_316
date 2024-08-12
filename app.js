@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("destination-form");
   const destinationList = document.querySelector("#destination-list");
 
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const destinationName = document.getElementById("destination-name").value;
@@ -61,4 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
       message.textContent = `You have ${totalDestinations} destinations planned.`;
     }
   }
+
+  const completeAllBtn = document.createElement("button");
+  completeAllBtn.textContent = "Complete All";
+  completeAllBtn.id = "complete-all-btn";
+  completeAllBtn.addEventListener("click", () => {
+    const allDestinations = destinationList.children;
+    for (let i = 0; i < allDestinations.length; i++) {
+      const li = allDestinations[i];
+      li.classList.add("completed");
+      li.style.border = "2px solid green";
+    }
+  });
+
+  // Add the "Complete All" button to the page
+  document.body.appendChild(completeAllBtn);
 });
